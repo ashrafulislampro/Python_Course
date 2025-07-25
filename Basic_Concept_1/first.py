@@ -1,0 +1,5 @@
+print("kopa python kopa")
+print(233434)
+print(44545)
+print(343)
+print("python ke dore felci mamma")
