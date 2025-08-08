@@ -12,33 +12,40 @@ class Cat(Animal):
     def make_sound(self):
         print("meow meow")
 
-
+class Goat(Animal):
+    def __init__(self, name)-> None:
+        super().__init__(name)
+        
+    def make_sound(self):
+        print("beh beh beh")
+        
+        
 class Dog(Animal):
     def __init__(self, name)-> None:
         super().__init__(name)
     def make_sound(self):
         print("gheu gheu")
 
-def Goat(Animal):
-    def __init__(self, name)-> None:
-        super().__init__(name)
-        
-    def make_sound(self, ):
-        print("")
-        
-        
-        
-        
-        
-        
+
 
 don = Cat("Real Don")
-don.make_sound()
+# don.make_sound()
 
 dog = Dog("Rocky")
-dog.make_sound()
+# dog.make_sound()
 
-dfdf 
+
+
+mess = Goat("L M")
+# mess.make_sound()
+
+
+less = Goat("gora gori")
+
+animals = [don, dog, mess, less]
+
+for animal in animals:
+    animal.make_sound() 
 
 
 
