@@ -11,16 +11,47 @@
 
 """
 
-class Shop:
-    def __init__(self, name):
+
+class Product:
+    def __init__(self, name, price, quantity):
         self.name = name
-        self.cart = []
-        
-    def add_product(self, price, quantity):
         self.price = price
         self.quantity = quantity
         
+class Shop:
+    def __init__(self, name):
+        self.name = name
+        self.products = []
+    
+    def add_product(self, name, price, quantity):
+        product = Product(name, price, quantity)
+        # print("Product: ", )
+        self.products.append(product)
+    
+    def buy_product(self, name):
+        for item in self.products:
+            if item.name == name:
+                if  item.quantity > 0:
+                    item.quantity -= 1
+                    print("Congrats, You can buy the product")
+                    return
+                else:    
+                    print("Sorry, Stock out this product")         
+                    return
+        print("Sorry, Stock out this product")
+            
+
+shop = Shop("Mubarak Proprietor Shop")
+shop.add_product("Watch", 200, 3)
+shop.add_product("Cap", 100, 5)
+shop.add_product("Glass", 250, 6)
+
+shop.buy_product("Laptop")
 
 
-class Product(Shop):
-    pass
+
+
+
+
+
+        
